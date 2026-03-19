@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "test": "jest --runInBand",
-    "test:watch": "jest --watch",
+    "test": "jest template --runInBand",
+    "test:watch": "jest template --watch",
     "test:answers": "jest answers --runInBand",
-    "coverage": "jest --coverage --runInBand"
+    "coverage": "jest template --coverage --runInBand"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",
