@@ -35,3 +35,15 @@
 8. `08-getAuthorizationHeader.ts` - 認証ヘッダー生成
 9. `09-summarizeOrders.ts` - 集計ロジック
 10. `10-canSubmitOrder.ts` - 複数条件の送信可否判定
+
+## pro-add01（応用編：モックが難しいが実際の開発で起こり得るシナリオ）
+1. `01-sendNotification.ts` - 複数チャンネルへの通知とフォールバック
+2. `02-cacheAside.ts` - Cache-Asideパターン（キャッシュヒット/ミス）
+3. `03-withTransaction.ts` - トランザクション管理（コミット/ロールバック）
+4. `04-createRateLimiter.ts` - レートリミッター（時刻の注入）
+5. `05-createCircuitBreaker.ts` - サーキットブレーカー（状態機械）
+6. `06-processDueTasks.ts` - スケジュールタスクの実行（日時の注入）
+7. `07-fetchAllPages.ts` - カーソルベースのページネーション全件取得
+8. `08-processEvents.ts` - 冪等なイベント処理（重複排除）
+9. `09-retryWithBackoff.ts` - 指数バックオフつきリトライ（delay注入）
+10. `10-withAudit.ts` - 監査ログラッパー（成功/失敗の記録）
