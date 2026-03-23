@@ -2,10 +2,20 @@ import { describe, it, expect } from "@jest/globals";
 import { countVowels } from "../../src/beginner/05-countVowels";
 
 describe("countVowels", () => {
-  it.todo("ケース1を書く");
-  it.todo("ケース2を書く");
-  it.todo("ケース3を書く");
-});
+  it("母音の数を数える", () => {
+    expect(countVowels("education")).toBe(5);
+  });
 
-// ヒント:
-// 大文字小文字、母音なし、空文字
+  it("大文字小文字を区別せず母音を数える", () => {
+    expect(countVowels("AEIOUaeiou")).toBe(10);
+  });
+
+  it("空文字は0", () => {
+    expect(countVowels(""))
+      .toBe(0);
+  });
+
+  it("母音がなければ0", () => {
+    expect(countVowels("rhythm")).toBe(0);
+  });
+});

@@ -2,9 +2,17 @@ import { describe, it, expect } from "@jest/globals";
 import { formatFullName } from "../../src/beginner/04-formatFullName";
 
 describe("formatFullName", () => {
-  it.todo("ケース1を書く");
-  it.todo("ケース2を書く");
-  it.todo("ケース3を書く");
+  it("姓 名 の順で結合する", () => {
+    expect(formatFullName("Taro", "Yamada")).toBe("Yamada Taro");
+  });
+
+  it("スペースは1つで結合される", () => {
+    expect(formatFullName("Hanako", "Sato")).toBe("Sato Hanako");
+  });
+
+  it("空文字でもそのまま結合する", () => {
+    expect(formatFullName("", "Yamada")).toBe("Yamada ");
+  });
 });
 
 // ヒント:

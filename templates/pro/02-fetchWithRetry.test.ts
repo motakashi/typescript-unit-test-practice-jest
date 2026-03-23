@@ -2,9 +2,12 @@ import { describe, it, expect } from "@jest/globals";
 import { fetchWithRetry } from "../../src/pro/02-fetchWithRetry";
 
 describe("fetchWithRetry", () => {
-  it.todo("ケース1を書く");
-  it.todo("ケース2を書く");
-  it.todo("ケース3を書く");
+  it("正常登録できる", async () => {
+    const task = jest.fn().mockResolvedValue("ok");
+    const result = await fetchWithRetry(task,2);
+
+    expect(task).toHaveBeenCalledTimes(1);
+  });
 });
 
 // ヒント:
